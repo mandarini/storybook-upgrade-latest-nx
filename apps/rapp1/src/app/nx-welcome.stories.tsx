@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { NxWelcome } from './nx-welcome';
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within } from '@storybook/test';
+import { expect } from '@storybook/test';
 
 const meta: Meta<typeof NxWelcome> = {
   component: NxWelcome,
@@ -19,6 +19,6 @@ export const Heading: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to NxWelcome!/gi)).toBeTruthy();
+    expect(canvas.getByText(/Hello there/gi)).toBeTruthy();
   },
 };

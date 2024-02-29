@@ -6,6 +6,7 @@ import NxWelcome from './nx-welcome';
 export function App() {
   return (
     <div>
+      <p>Welcome to App!</p>
       <NxWelcome title="rapp1" />
     </div>
   );
